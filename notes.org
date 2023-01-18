@@ -1,0 +1,25 @@
+* Inbox
+** [2023-01-18 Ср 14:32] it's like buffer of datagrams or what
+baDatagramArray[i].data(),
+[[file:~/Downloads/misha/sendToPNS/UdpRecvSendQT/udprecv.cpp::baDatagramArray\[i\].data(),]]
+
+** [2023-01-18 Ср 13:30] reading the datagram for one device only
+               if(DevIdRecv[i]==baDatagramRead[0] && PackIdRecv[i]==baDatagramRead[1] && sizeRec==baDatagramArray[i].size())
+
+               looks like its protocol (deviceID always equals 1st byte in baDatagramRead[0])
+
+               there is also something like struct ID after (2nd byte)
+
+[[file:~/Downloads/misha/sendToPNS/UdpRecvSendQT/udprecv.cpp::if(DevIdRecv\[i\]==baDatagramRead\[0\] && PackIdRecv\[i\]==baDatagramRead\[1\] && sizeRec==baDatagramArray\[i\].size())]]
+
+** [2023-01-18 Ср 09:38] no PNS device registration ???
+      DevIdRecv.push_back(DevId_RSBN);
+
+[[file:~/Downloads/misha/sendToPNS/Dispether/displ410.cpp::DevIdRecv.push_back(DevId_RSBN);]]
+** [2023-01-18 Ср 09:27] no construction and usage of RecvIVO
+    only RecvPNV
+
+[[file:~/Downloads/misha/sendToPNS/Dispether/displ410.h::UdpRecv* RecvIVO;]]
+** [2023-01-17 Вт 13:24] establishment of the udp connection
+
+[[file:~/Downloads/misha/sendToPNS/UdpRecvSendQT/udprecv.cpp::bBind = m_pUdpRecv->bind(adr, port);]]
